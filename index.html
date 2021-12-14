@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -47,7 +51,7 @@
     <section class="jumbotron text-center">
       <img src="img/FotoViqri.jpg" alt="Viqri Bayhaqi" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4 text-danger">Viqri Bayhaqi</h1>
-      <p class="lead">Graphic Designer | Web Developer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -67,10 +71,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="zoom-in-right" data-aos-duration="1000">
             <p>My name is Viqri Bayhaqi, i am 20 years old, i study at the Faculty Of Informatics Engineering, Pamulang University (UNPAM), i like art things like music and painting.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="200">
             <p>I once worked in the first printing company in Indonesia that used a ROTOGRAVURE printing machine to be precise at PT. Indogravure.</p>
           </div>
         </div>
@@ -95,7 +99,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000">
               <img src="Galery/Foto1.jpg" class="card-img-top" alt="Gallery" />
               <div class="card-body">
                 <p class="card-text">"Ibarat air laut di pantai, meski ia kadang pasang dan surut, percayalah, rasa air laut itu tidak akan berubah."</p>
@@ -103,7 +107,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="750" data-aos-delay="100">
               <img src="Galery/Foto2.jpg" class="card-img-top" alt="Gallery" />
               <div class="card-body">
                 <p class="card-text">"sanggup memelihara kepribadian, sanggup patuh pada kejujuran, sanggup mempertinggi prestasi, sanggup menjaga sopan santun dan sanggup menguasai diri."</p>
@@ -111,7 +115,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="750" data-aos-delay="200">
               <img src="Galery/Foto3.jpg" class="card-img-top" alt="Gallery" />
               <div class="card-body">
                 <p class="card-text">"Memanipulasi gambar menjadi karya itu lebih baik daripada memanipulasi pikiran dengan hal yang kotor"</p>
@@ -119,7 +123,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="750" data-aos-delay="300">
               <img src="Galery/Foto4.jpg" class="card-img-top" alt="Gallery" />
               <div class="card-body">
                 <p class="card-text">"Jalan yang sulit sering kali mengarah ke tujuan yang indah."</p>
@@ -127,7 +131,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="750" data-aos-delay="400">
               <img src="Galery/Foto5.jpg" class="card-img-top" alt="Gallery" />
               <div class="card-body">
                 <p class="card-text">"Terserah mau bilang apa tentang penampilanku, bagaimana gaya hidupku, atau seberapa tua kendaraan yang aku punya. Inilah diriku apa adanya, selama tidak melanggar norma dan agama."</p>
@@ -202,6 +206,21 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Graphic Designer | Web Developer" });
+      gsap.from(".jumbotron img", { duration: 1.5, y: -100, opacity: 0, delay: 0.3, ease: "bounce" });
+      gsap.from(".navbar", { duration: 1.5, y: -100, opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1.5, x: -50, opacity: 0, delay: 0.6, ease: "bounce" });
+    </script>
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbw__y72nrK0LkfC3qQySAW8iIDN9kgqMgl0EEZX64zOt_NM0G-1iwrUBZDhhgWh27jp/exec";
